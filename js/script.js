@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const contactForm = document.querySelector('#kontakt-forma');
   if (contactForm) {
-    const isPlaceholderForm = contactForm.action.includes('YOUR_FORM_ID');
     contactForm.addEventListener('submit', (event) => {
+      const isPlaceholderForm = contactForm.action.includes('YOUR_FORM_ID');
       if (isPlaceholderForm) {
         event.preventDefault();
         window.alert('Pre slanja upita potrebno je da vlasnik sajta unese Formspree ID forme.');
