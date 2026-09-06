@@ -458,7 +458,7 @@ blockquote {
 }
 
 .faq-item.is-open .faq-answer {
-  max-height: 220px;
+  max-height: var(--faq-max-height, 600px);
 }
 
 .form-card {

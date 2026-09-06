@@ -15,7 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
     button.addEventListener('click', () => {
       const item = button.closest('.faq-item');
       if (!item) return;
+      const answer = item.querySelector('.faq-answer');
+      if (!answer) return;
+
       item.classList.toggle('is-open');
+      if (item.classList.contains('is-open')) {
+        answer.style.setProperty('--faq-max-height', `${answer.scrollHeight}px`);
+      } else {
+        answer.style.setProperty('--faq-max-height', '0px');
+      }
     });
   });
 
@@ -36,4 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  const contactForm = document.querySelector('form[action*="YOUR_FORM_ID"]');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      window.alert('Pre slanja upita potrebno je da vlasnik sajta unese Formspree ID forme.');
+    });
+  }
 });
