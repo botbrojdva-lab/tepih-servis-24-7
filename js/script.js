@@ -61,12 +61,5 @@ document.addEventListener('DOMContentLoaded', () => {
       window.sessionStorage.setItem('kontakt-upit-poslat', '1');
     });
 
-    const statusMessage = document.querySelector('#forma-poruka');
-    const searchParams = new URLSearchParams(window.location.search);
-    const wasFormSubmitted = window.sessionStorage.getItem('kontakt-upit-poslat') === '1';
-    if (statusMessage && wasFormSubmitted && searchParams.get('submitted') === '1') {
-      statusMessage.hidden = false;
-      window.sessionStorage.removeItem('kontakt-upit-poslat');
-    }
   }
 });
