@@ -48,11 +48,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const contactForm = document.querySelector('form[action*="YOUR_FORM_ID"]');
+  const contactForm = document.querySelector('#kontakt-forma');
   if (contactForm) {
+    const isPlaceholderForm = contactForm.action.includes('YOUR_FORM_ID');
     contactForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      window.alert('Pre slanja upita potrebno je da vlasnik sajta unese Formspree ID forme.');
+      if (isPlaceholderForm) {
+        event.preventDefault();
+        window.alert('Pre slanja upita potrebno je da vlasnik sajta unese Formspree ID forme.');
+        return;
+      }
+
+      window.sessionStorage.setItem('kontakt-upit-poslat', '1');
     });
+
+    const statusMessage = document.querySelector('#forma-poruka');
+    const searchParams = new URLSearchParams(window.location.search);
+    const wasFormSubmitted = window.sessionStorage.getItem('kontakt-upit-poslat') === '1';
+    if (statusMessage && wasFormSubmitted && searchParams.get('submitted') === '1') {
+      statusMessage.hidden = false;
+      window.sessionStorage.removeItem('kontakt-upit-poslat');
+    }
   }
 });

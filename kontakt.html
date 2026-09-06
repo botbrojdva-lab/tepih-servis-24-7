@@ -46,7 +46,7 @@
             <h2 class="section-title">Pošaljite upit</h2>
             <!-- Replace YOUR_FORM_ID with the actual Formspree form ID before going live. -->
             <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="form-grid" id="kontakt-forma">
-              <input type="hidden" name="_next" value="kontakt.html" />
+              <input type="hidden" name="_next" value="kontakt.html?submitted=1#forma-poruka" />
               <div>
                 <label for="ime">Ime i prezime</label>
                 <input id="ime" name="ime" type="text" required />
@@ -75,6 +75,9 @@
                 <textarea id="poruka" name="poruka"></textarea>
               </div>
               <button type="submit" class="btn btn-primary">Pošaljite upit</button>
+              <p class="form-status" id="forma-poruka" hidden>
+                Hvala! Upit je uspešno poslat. Javićemo vam se u najkraćem roku.
+              </p>
             </form>
           </div>
 
@@ -126,7 +129,7 @@
             <p><strong>Za udaljenija mesta i okolinu pozovite nas za dogovor.</strong></p>
           </div>
           <div class="map-box map-aspect">
-            <div class="map-placeholder" aria-label="Mapa područja pokrivanja usluge">
+            <div class="map-placeholder" role="img" aria-label="Mapa područja pokrivanja usluge">
               Mapa područja pokrivanja usluge
             </div>
           </div>
