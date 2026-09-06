@@ -46,6 +46,7 @@
             <h2 class="section-title">Pošaljite upit</h2>
             <!-- Replace YOUR_FORM_ID with the actual Formspree form ID before going live. -->
             <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="form-grid" id="kontakt-forma">
+              <input type="hidden" name="_next" value="kontakt.html?upit=poslat#forma-poruka" />
               <div>
                 <label for="ime">Ime i prezime</label>
                 <input id="ime" name="ime" type="text" required />
@@ -74,6 +75,9 @@
                 <textarea id="poruka" name="poruka"></textarea>
               </div>
               <button type="submit" class="btn btn-primary">Pošaljite upit</button>
+              <p class="form-status" id="forma-poruka" hidden>
+                Hvala! Upit je uspešno poslat. Javićemo vam se u najkraćem roku.
+              </p>
             </form>
           </div>
 
@@ -164,7 +168,7 @@
           <h2 class="section-title">Naša lokacija</h2>
           <div class="map-frame map-aspect">
             <iframe
-              src="https://maps.google.com/maps?q=Bulevar%20Oslobo%C4%91enja%20123,%20Beograd&z=15&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11324.921610749269!2d20.443398666887678!3d44.78656873301386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a707f2cd6f50f%3A0x2f64f14f9f8eab85!2sBulevar%20oslobo%C4%91enja%2C%20Beograd!5e0!3m2!1ssr!2srs!4v1736200000000!5m2!1ssr!2srs"
               loading="lazy"
               title="Mapa lokacije Tepih Servis 24/7"
             ></iframe>

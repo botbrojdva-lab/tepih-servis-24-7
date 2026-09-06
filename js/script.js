@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const faqButtons = document.querySelectorAll('.faq-question');
   faqButtons.forEach((button) => {
+    button.setAttribute('aria-expanded', 'false');
     button.addEventListener('click', () => {
       const item = button.closest('.faq-item');
       if (!item) return;
@@ -19,7 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!answer) return;
 
       item.classList.toggle('is-open');
-      if (item.classList.contains('is-open')) {
+      const isOpen = item.classList.contains('is-open');
+      button.setAttribute('aria-expanded', String(isOpen));
+      if (isOpen) {
         answer.style.setProperty('--faq-max-height', `${answer.scrollHeight}px`);
       } else {
         answer.style.setProperty('--faq-max-height', '0px');
@@ -51,5 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
       event.preventDefault();
       window.alert('Pre slanja upita potrebno je da vlasnik sajta unese Formspree ID forme.');
     });
+  }
+
+  const statusMessage = document.querySelector('#forma-poruka');
+  if (statusMessage) {
+    const searchParams = new URLSearchParams(window.location.search);
+    if (searchParams.get('upit') === 'poslat') {
+      statusMessage.hidden = false;
+    }
   }
 });
