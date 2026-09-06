@@ -1,12 +1,12 @@
 /* css/style.css */
 :root {
   --primary: #1e5a9e;
-  --text-dark: #1e293b;
-  --accent: #f97316;
-  --light-blue: #eaf2fb;
-  --light-blue-strong: #cfe3fa;
-  --light-gray: #f4f6f8;
-  --white: #ffffff;
+  --text-dark: #e2e8f0;
+  --accent: #334155;
+  --light-blue: #1e293b;
+  --light-blue-strong: #93c5fd;
+  --light-gray: #1f2937;
+  --white: #273549;
   --shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   --radius-card: 12px;
   --radius-btn: 8px;
@@ -52,7 +52,7 @@ a {
 .section-subtitle {
   margin: 0 auto 36px;
   max-width: 760px;
-  color: #475569;
+  color: #94a3b8;
 }
 
 .bg-light {
@@ -67,8 +67,8 @@ a {
   position: sticky;
   top: 0;
   z-index: 30;
-  background: rgba(255, 255, 255, 0.98);
-  border-bottom: 1px solid #e2e8f0;
+  background: rgba(15, 23, 42, 0.96);
+  border-bottom: 1px solid #334155;
 }
 
 .nav-wrap {
@@ -111,7 +111,7 @@ a {
 .nav-toggle {
   display: none;
   background: transparent;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #475569;
   color: var(--primary);
   border-radius: 8px;
   padding: 8px;
@@ -132,7 +132,7 @@ a {
 
 .btn-primary {
   background: var(--primary);
-  color: var(--white);
+  color: var(--text-dark);
   border-color: var(--primary);
 }
 
@@ -142,12 +142,12 @@ a {
 
 .btn-outline {
   background: transparent;
-  color: var(--white);
-  border-color: var(--white);
+  color: var(--text-dark);
+  border-color: var(--text-dark);
 }
 
 .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(147, 197, 253, 0.14);
 }
 
 .btn-outline-blue {
@@ -158,7 +158,7 @@ a {
 
 .btn-accent {
   background: var(--accent);
-  color: var(--white);
+  color: var(--text-dark);
   border-color: var(--accent);
 }
 
@@ -167,12 +167,12 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 3px solid #93c5fd;
+  outline: 3px solid #60a5fa;
   outline-offset: 2px;
 }
 
 .hero {
-  color: var(--white);
+  color: var(--text-dark);
   padding: 110px 0 90px;
   background-size: cover;
   background-position: center;
@@ -213,7 +213,7 @@ textarea:focus-visible {
 }
 
 .breadcrumb {
-  color: #dbeafe;
+  color: #cbd5e1;
   font-size: 0.95rem;
 }
 
@@ -276,7 +276,7 @@ textarea:focus-visible {
   left: 12%;
   right: 12%;
   height: 2px;
-  background: #bfdbfe;
+  background: #334155;
   z-index: 0;
 }
 
@@ -291,7 +291,7 @@ textarea:focus-visible {
   height: 62px;
   border-radius: 50%;
   background: var(--primary);
-  color: var(--white);
+  color: var(--text-dark);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -328,7 +328,7 @@ textarea:focus-visible {
   top: 10px;
   left: 10px;
   background: rgba(15, 23, 42, 0.78);
-  color: var(--white);
+  color: var(--text-dark);
   border-radius: 999px;
   padding: 4px 10px;
   font-size: 0.78rem;
@@ -348,7 +348,7 @@ blockquote {
 
 .cta-band {
   background: var(--primary);
-  color: var(--white);
+  color: var(--text-dark);
   text-align: center;
 }
 
@@ -360,7 +360,7 @@ blockquote {
 
 .cta-simple {
   background: var(--primary);
-  color: var(--white);
+  color: var(--text-dark);
   text-align: center;
 }
 
@@ -410,16 +410,16 @@ blockquote {
 .pricing-table td {
   padding: 14px 16px;
   text-align: left;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #334155;
 }
 
 .pricing-table th {
   background: var(--primary);
-  color: var(--white);
+  color: var(--text-dark);
 }
 
 .pricing-table tr:nth-child(even) td {
-  background: #f8fafc;
+  background: #1f2937;
 }
 
 .pricing-table td:last-child,
@@ -489,10 +489,12 @@ input,
 select,
 textarea {
   width: 100%;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #475569;
   border-radius: 8px;
   padding: 11px 12px;
   font: inherit;
+  background: #0f172a;
+  color: var(--text-dark);
 }
 
 textarea {
@@ -525,7 +527,7 @@ textarea {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--shadow);
-  border: 1px solid #dbeafe;
+  border: 1px solid #334155;
 }
 
 .map-box img {
@@ -537,7 +539,7 @@ textarea {
 .map-placeholder {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  background: linear-gradient(135deg, #1e293b, #334155);
   display: grid;
   place-items: center;
   text-align: center;
@@ -575,7 +577,7 @@ textarea {
 }
 
 .footer-grid h4 {
-  color: var(--white);
+  color: var(--text-dark);
   margin-top: 0;
 }
 
@@ -592,7 +594,7 @@ textarea {
   right: 0;
   bottom: 0;
   background: var(--primary);
-  color: var(--white);
+  color: var(--text-dark);
   display: none;
   align-items: center;
   justify-content: center;
@@ -696,7 +698,7 @@ textarea {
 
   .pricing-table td {
     text-align: left !important;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid #334155;
     background: var(--white) !important;
     position: relative;
     padding-left: 44%;
