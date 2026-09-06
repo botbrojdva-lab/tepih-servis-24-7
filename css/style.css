@@ -6,7 +6,7 @@
   --light-blue: #1e293b;
   --light-blue-strong: #93c5fd;
   --light-gray: #1f2937;
-  --white: #273549;
+  --surface: #273549;
   --shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   --radius-card: 12px;
   --radius-btn: 8px;
@@ -20,7 +20,7 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   color: var(--text-dark);
-  background-color: var(--white);
+  background-color: var(--surface);
   line-height: 1.6;
 }
 
@@ -153,7 +153,7 @@ a {
 .btn-outline-blue {
   color: var(--primary);
   border-color: var(--primary);
-  background: var(--white);
+  background: var(--surface);
 }
 
 .btn-accent {
@@ -235,7 +235,7 @@ textarea:focus-visible {
 }
 
 .card {
-  background: var(--white);
+  background: var(--surface);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow);
   padding: 24px;
@@ -400,7 +400,7 @@ blockquote {
 .pricing-table {
   width: 100%;
   border-collapse: collapse;
-  background: var(--white);
+  background: var(--surface);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -433,7 +433,7 @@ blockquote {
 }
 
 .faq-item {
-  background: var(--white);
+  background: var(--surface);
   border-radius: 12px;
   box-shadow: var(--shadow);
   overflow: hidden;
@@ -441,7 +441,7 @@ blockquote {
 
 .faq-question {
   width: 100%;
-  background: var(--white);
+  background: var(--surface);
   color: var(--text-dark);
   border: 0;
   font-size: 1rem;
@@ -468,7 +468,7 @@ blockquote {
 }
 
 .form-card {
-  background: var(--white);
+  background: var(--surface);
   border-radius: 12px;
   box-shadow: var(--shadow);
   padding: 24px;
@@ -699,7 +699,7 @@ textarea {
   .pricing-table td {
     text-align: left !important;
     border-bottom: 1px solid #334155;
-    background: var(--white) !important;
+    background: var(--surface) !important;
     position: relative;
     padding-left: 44%;
     min-height: 52px;
