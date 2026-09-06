@@ -50,8 +50,8 @@
             <h2 class="section-title">Pošaljite upit</h2>
             <!-- Replace YOUR_FORM_ID with the actual Formspree form ID before going live. -->
             <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="form-grid" id="kontakt-forma">
-              <!-- Replace example.com with your public domain so _next stays an absolute URL. -->
-              <input type="hidden" name="_next" value="https://example.com/hvala.html" />
+              <!-- Replace with your final public URL if your hosting does not support site-root redirects. -->
+              <input type="hidden" name="_next" value="/hvala.html" />
               <div>
                 <label for="ime">Ime i prezime</label>
                 <input id="ime" name="ime" type="text" required />
