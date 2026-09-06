@@ -546,6 +546,12 @@ textarea {
   padding: 24px;
 }
 
+.thank-you-card {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .map-frame iframe {
   width: 100%;
   height: 100%;

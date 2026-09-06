@@ -57,9 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
         window.alert('Pre slanja upita potrebno je da vlasnik sajta unese Formspree ID forme.');
         return;
       }
-
-      window.sessionStorage.setItem('kontakt-upit-poslat', '1');
     });
-
   }
 });
